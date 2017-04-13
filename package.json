@@ -1,0 +1,35 @@
+
+{
+  "name": "nefjs",
+  "version": "0.0.1",
+  "description": "NEF in the browser",
+  "author": "Sean Aubin",
+  "license": "Free for non-commercial use",
+  "main": "nengo_gui/static/dist/nengo.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nengo/nengo_gui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nengo/nengo_gui/issues"
+  },
+  "private": true,
+  "scripts": {
+    "postinstall": "typings install"
+  },
+  "dependencies": {
+    "@types/d3": "^3.5.36",
+    "@types/tape": "^4.2.28",
+    "d3": "^3.5.3",
+    "tap-webpack-plugin": "^2.0.0",
+    "tape": "^4.6.3",
+    "ts-loader": "^2.0.1",
+    "tslint": "^4.5.1",
+    "tslint-eslint-rules": "^3.4.0",
+    "tslint-microsoft-contrib": "^4.0.0",
+    "typescript": "^2.2.1",
+    "typings": "^2.1.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
