@@ -1,4 +1,6 @@
-import { SpikingLif } from "./lif"
+import { SpikingLif } from "./lif";
+import * as Papa from "papaparse"; // TODO: how do I install this and the typings?
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // First, make the basic example with few neurons
@@ -6,19 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // make an ensemble of neurons
     const neuronNumber = 4;
 
-    // load the intercepts
-    const intercepts: number[] = [];
-    // load the max firing rates
-    const maxFires: number[] = [];
+    const intercepts: number[] = Papa.parse("4_neurons/intercepts.csv");
+    const maxFires: number[] = Papa.parse("4_neurons/max_rates.csv");
+    const encoders: number[] = Papa.parse("4_neurons/encoders.csv");
+    const decoders: number[] = Papa.parse("4_neurons/decoders.csv");
+
     const neurons: SpikingLif[] = [];
     for (let nIdx = 0; nIdx < neuronNumber; nIdx++) {
         neurons.push(
             new SpikingLif(0.002, 0.02, intercepts[nIdx], maxFires[nIdx], 1.0)
         );
     }
-
-    // load their encoders
-    // load their decoders
 
     // Then make the example with more neurons
 
