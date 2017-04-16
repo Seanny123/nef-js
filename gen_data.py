@@ -4,9 +4,9 @@ import numpy as np
 
 def save_ens(n_neurons, sim):
     np.savetxt("%s_neurons/decoders.csv" % n_neurons, sim.data[conn].weights, delimiter=",")
-    np.savetxt("%s_neurons/encoders.csv" % n_neurons, sim.data[ens].encoders, delimiter=",")
-    np.savetxt("%s_neurons/intercepts.csv" % n_neurons, sim.data[ens].intercepts, delimiter=",")
-    np.savetxt("%s_neurons/max_rates.csv" % n_neurons, sim.data[ens].max_rates, delimiter=",")
+    np.savetxt("%s_neurons/encoders.csv" % n_neurons, sim.data[ens].encoders.T, delimiter=",")
+    np.savetxt("%s_neurons/intercepts.csv" % n_neurons, sim.data[ens].intercepts[:, None].T, delimiter=",")
+    np.savetxt("%s_neurons/max_rates.csv" % n_neurons, sim.data[ens].max_rates[:, None.T, delimiter=",")
 
 
 n_neurons = 4

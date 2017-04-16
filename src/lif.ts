@@ -57,7 +57,6 @@ export class SpikingLif {
 
     protected calcSpike(current: number) {
         if (!this.refac) {
-
             const dV = 1.0 / this.tRc * (current - this.pot) * this.dt;
             this.pot += dV;
 
@@ -68,8 +67,8 @@ export class SpikingLif {
             } else {
                 return this.pot;
             }
+
         } else {
-            
             this.refacTime += this.dt;
             if(this.refacTime >= this.tRef) {
                 this.refac = false;

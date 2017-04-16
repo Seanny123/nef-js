@@ -1,20 +1,24 @@
 
 {
-  "name": "nefjs",
+  "name": "nef",
   "version": "0.0.1",
   "description": "NEF in the browser",
   "author": "Sean Aubin",
   "license": "Free for non-commercial use",
-  "main": "nengo_gui/static/dist/nengo.js",
+  "main": "dist/nef.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nengo/nengo_gui.git"
+    "url": "https://github.com/Seanny123/nef-js.git"
   },
   "bugs": {
-    "url": "https://github.com/nengo/nengo_gui/issues"
+    "url": "https://github.com/Seanny123/nef-js/issues"
   },
   "private": true,
   "scripts": {
+    "build": "webpack --debug --devtool source-map --output-pathinfo",
+    "debug": "webpack-dev-server --config webpack.debug.js --inline",
+    "release": "webpack --optimize-minimize --optimize-occurence-order",
+    "test": "webpack --config webpack.test.js",
     "postinstall": "typings install"
   },
   "dependencies": {
@@ -22,6 +26,7 @@
     "@types/papaparse": "^4.0.0",
     "@types/tape": "^4.2.28",
     "d3": "^3.5.3",
+    "html-webpack-plugin": "^2.28.0",
     "papaparse": "^4.2.0",
     "tap-webpack-plugin": "^2.0.0",
     "tape": "^4.6.3",
