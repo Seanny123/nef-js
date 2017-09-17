@@ -1429,6 +1429,10 @@ ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
+interact.js@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/interact.js/-/interact.js-1.2.8.tgz#b62bc004563b5c6f294b6b115b396205d843f60b"
+
 interpret@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.2.tgz#f4f623f0bb7122f15f5717c8e254b8161b5c5b2d"
@@ -1801,6 +1805,10 @@ make-error-cause@^1.2.1:
 make-error@^1.2.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.2.3.tgz#6c4402df732e0977ac6faf754a5074b3d2b1d19d"
+
+maquette@^2.4.5:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/maquette/-/maquette-2.5.3.tgz#182624f0b2d1d95618380d8546929a2a4f26fd95"
 
 media-typer@0.3.0:
   version "0.3.0"

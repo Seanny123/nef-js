@@ -6,7 +6,7 @@ var config = {
     // Putting the entry point in a list is a workaround for this error:
     // Error: a dependency to an entry point is not allowed
     entry: {
-        nef: "./src/princip1_and_2.ts",
+        nef: "./src/spike_filter.ts",
     },
     output: {
         path: path.resolve(__dirname, "./dist"),

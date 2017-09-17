@@ -1,6 +1,7 @@
 export class SpikingLif {
     alpha: number;
     biasCurrent: number;
+    encoder: number;
     dt: number;
     refac: boolean;
     refacTime: number;
@@ -8,9 +9,11 @@ export class SpikingLif {
     tRc: number;
     pot: number;
 
-    constructor(tRef: number, tRc: number, intercept: number, maxFire: number, radius: number) {
+    constructor(tRef: number, tRc: number, encoder:number, intercept: number, maxFire: number, radius: number) {
         this.tRef = tRef;
         this.tRc = tRc;
+
+        this.encoder = encoder;
 
         const beta = 1.0 / (
             1.0 - Math.exp(

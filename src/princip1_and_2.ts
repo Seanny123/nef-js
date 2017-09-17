@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const voltages: number[] = [];
     for (let nIdx = 0; nIdx < neuronNumber; nIdx++) {
         neurons.push(
-            new SpikingLif(0.002, 0.02, intercepts[nIdx], maxFires[nIdx], 1.0)
+            new SpikingLif(0.002, 0.02, encoders[nIdx], intercepts[nIdx], maxFires[nIdx], 1.0)
         );
         neuronPos.push(nIdx);
     }
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // make the neurons glow in proportion to their voltage level
         let nIdx = 0;
         for (let neuron of neurons) {
-            voltages[nIdx] = neuron.spikes(sinInput * encoders[nIdx]);
+            voltages[nIdx] = neuron.spikes(sinInput * neuron.encoder);
             neurCircs[nIdx].style.fillOpacity = voltages[nIdx];
             nIdx++;
         }
