@@ -18,6 +18,7 @@ import * as d3 from "d3";
 
 import { ValueView } from "./views/value";
 import { Axes, Plot } from "./base";
+import * as utils from "../utils";
 
 export class Value extends Plot {
 
@@ -46,7 +47,6 @@ export class Value extends Plot {
             uid,
             dimensions,
             synapse,
-            miniItem,
             xlim,
             ylim
         );
@@ -75,10 +75,6 @@ export class Value extends Plot {
         const shownData = this.datastore.timeSlice(tStart, tEnd);
         if (shownData[0] != null) {
             this.view.lines = this.lines.map(line => line(shownData));
-            if (this.legendVisible && this.view.legend.valuesVisible) {
-                const last = shownData[shownData.length - 1];
-                this.view.legend.values = last.slice(1);
-            }
         }
     }, 20);
 }

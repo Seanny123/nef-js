@@ -36,8 +36,7 @@ export class ValueView extends PlotView {
     }
 
     private addPath() {
-        const i = this.paths.length;
-        const node = h("path.line", {stroke: this.colors[i]});
+        const node = h("path.line", {stroke: this.colors[this.paths.length]});
         const path = utils.domCreateSVG(node) as SVGPathElement;
         this.paths.push(path);
         this.body.appendChild(path);
